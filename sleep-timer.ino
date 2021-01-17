@@ -12,7 +12,6 @@ bool toggle;
 
 void setup() {
     pinMode(OUTPUT_PIN, OUTPUT);
-    toggle = false;
 }
 
 void loop() {
