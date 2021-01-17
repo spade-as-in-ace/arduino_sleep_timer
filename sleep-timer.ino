@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-    while(!toggle && analogRead(SENSOR_PIN) > THRESHOLD_VALUE){
+    while(analogRead(SENSOR_PIN) > THRESHOLD_VALUE){
         toggle = true;
     }
     if(toggle) {
