@@ -21,7 +21,7 @@ void loop() {
     if(toggle) {
         digitalWrite(OUTPUT_PIN, HIGH);
         uptime.restart();
-        while(!uptime.hasPassed(SLEEP_TIME));
+        while(!uptime.hasPassed(SLEEP_TIME) && analogRead(SENSOR_PIN) < THRESHOLD_VALUE);
         uptime.stop();
         digitalWrite(OUTPUT_PIN, LOW);
         toggle = false;
