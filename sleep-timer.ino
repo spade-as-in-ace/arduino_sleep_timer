@@ -12,12 +12,11 @@ bool toggle;
 
 void setup() {
     pinMode(OUTPUT_PIN, OUTPUT);
-    uptime.restart();
-    uptime.stop();
+    toggle = false;
 }
 
 void loop() {
-    while(analogRead(SENSOR_PIN) > THRESHOLD_VALUE){
+    while(!toggle && analogRead(SENSOR_PIN) > THRESHOLD_VALUE){
         toggle = true;
     }
     if(toggle) {
