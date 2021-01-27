@@ -20,6 +20,7 @@ void loop() {
     }
     if(toggle) {
         sweep();
+        toggle = false;
     }
 }
 
