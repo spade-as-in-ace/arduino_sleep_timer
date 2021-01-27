@@ -6,11 +6,13 @@
 #define THRESHOLD_VALUE 200
 #define SENSOR_PIN A0
 #define OUTPUT_PIN 9
+#define POWER_PIN 8
 
 Servo servo;
 bool toggle;
 
 void setup() {
+    pinMode(POWER_PIN, OUTPUT);
     servo.attach(OUTPUT_PIN);
 }
 
@@ -19,7 +21,9 @@ void loop() {
         toggle = true;
     }
     if(toggle) {
+        digitalWrite(POWER_PIN) = 1;
         sweep();
+        digitalWrite(POWER_PIN) = 0;
         toggle = false;
     }
 }
