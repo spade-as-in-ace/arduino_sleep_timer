@@ -1,5 +1,5 @@
 
-// Automatic Device Switch with Sleep Timer
+// Automatic Device Switch, No Timer Needed
 // For: @Ade_Kolade
 #include <Servo.h>
 
