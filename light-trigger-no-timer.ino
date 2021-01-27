@@ -11,7 +11,7 @@ Servo servo;
 bool toggle;
 
 void setup() {
-    servo.attatch(OUTPUT_PIN);
+    servo.attach(OUTPUT_PIN);
 }
 
 void loop() {
