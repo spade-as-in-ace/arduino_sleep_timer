@@ -21,9 +21,9 @@ void loop() {
         toggle = true;
     }
     if(toggle) {
-        digitalWrite(POWER_PIN) = 1;
+        digitalWrite(POWER_PIN, 1);
         sweep();
-        digitalWrite(POWER_PIN) = 0;
+        digitalWrite(POWER_PIN, 0);
         toggle = false;
     }
 }
